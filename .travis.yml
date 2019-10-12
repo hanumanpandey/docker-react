@@ -5,18 +5,5 @@
 # See how to further configure the matrix of combinations in here: https://docs.travis-ci.com/user/multi-os/
 language: node_js
 
-sudo: required
-
-services: 
-  - docker
-# Command to install dependencies for each configuration.
-before_install:
-  - docker build -t hanumpandey/docker-react -f Dockerfile.dev .
-# # For OSX, you may want to call a script installing virtual env and so on.
-
-# Command to run tests. These are run for each configuration
-script:
-  - docker run hanumpandey/docker-react npm run test -- --coverage
-
 
 	
