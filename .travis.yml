@@ -1,9 +1,18 @@
-# The configurations you want to execute
-# That is, a combination of operating system and python version
-# Please add or remove for your needs.
-# Check all possible values for python in here: https://docs.travis-ci.com/user/languages/python/
-# See how to further configure the matrix of combinations in here: https://docs.travis-ci.com/user/multi-os/
 language: node_js
-
-
-	
+node_js:
+  - "stable"
+cache:
+  directories:
+  - node_modules
+script:
+  - cd test-app
+  - npm install
+  - npm test
+  - npm run build
+deploy:
+  provider: pages
+  skip_cleanup: true
+#  github_token: $githubToken
+  local_dir: build
+  on:
+    branch: master
