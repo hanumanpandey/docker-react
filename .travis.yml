@@ -4,7 +4,7 @@
 # Check all possible values for python in here: https://docs.travis-ci.com/user/languages/python/
 # See how to further configure the matrix of combinations in here: https://docs.travis-ci.com/user/multi-os/
 
-sudo: require
+sudo: required
 
 services: 
   - docker
@@ -16,9 +16,6 @@ before_install:
 # Command to run tests. These are run for each configuration
 script:
   - docker run hanumpandey/docker-react npm run test -- --coverage
-  
-after_success:
-  - coveralls
 
 
 	
