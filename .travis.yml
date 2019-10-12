@@ -15,5 +15,5 @@ script:
 #  skip_cleanup: true
 #  github_token: $githubToken
 #  local_dir: build
-  on:
-    branch: master
+#  on:
+#    branch: master
