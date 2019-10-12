@@ -10,10 +10,10 @@ script:
 #  - npm install
 #  - npm test
 #  - npm run build
-deploy:
-  provider: pages
-  skip_cleanup: true
+#deploy:
+#  provider: pages
+#  skip_cleanup: true
 #  github_token: $githubToken
-  local_dir: build
+#  local_dir: build
   on:
     branch: master
