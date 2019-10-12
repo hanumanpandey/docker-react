@@ -3,13 +3,13 @@
 # Please add or remove for your needs.
 # Check all possible values for python in here: https://docs.travis-ci.com/user/languages/python/
 # See how to further configure the matrix of combinations in here: https://docs.travis-ci.com/user/multi-os/
-#language: python
+language: node_js
 
 sudo: require
 
-#matrix:
-#    include:
-        # - os: linux
+matrix:
+    include:
+         - os: linux
         #   python: 2.7
         # - os: osx
         #   language: generic
