@@ -10,10 +10,18 @@ script:
 #  - npm install
 #  - npm test
 #  - npm run build
-#deploy:
-#  provider: pages
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker"
+  env: "Docker-env"
+  bucket_name: "elasticbeanstalk-us-east-2-234381161604"
+  bucket_path: "docker"
 #  skip_cleanup: true
 #  github_token: $githubToken
 #  local_dir: build
-#  on:
-#    branch: master
+  on:
+        branch: master
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key:
+        secure:"$AWS_SECRET_KEY"
