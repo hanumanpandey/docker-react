@@ -6,7 +6,7 @@ cache:
   - node_modules
 script:
   - docker build -t hanumpandey/docker-react -f Dockerfile.dev .
-  - docker run hanumpandey/docker-react npm run start -- --coverage
+  - docker run hanumpandey/docker-react npm run test -- --coverage
 #  - npm install
 #  - npm test
 #  - npm run build
